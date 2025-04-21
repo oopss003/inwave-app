@@ -46,5 +46,6 @@ def summary():
 
 # ✅ Render 호환을 위한 실행 설정
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Render는 PORT 환경변수를 사용
-    app.run(host="0.0.0.0", port=port)
+    import os
+    port = int(os.environ.get("PORT", 5000))  # Render에서 제공하는 포트를 사용
+    app.run(host="0.0.0.0", port=port)   
